@@ -7,7 +7,7 @@ import org.junit.Assert;
 public class SqAreaTest {
 
     @Test
-    public void when62then() {
+    public void whenp6k2s2then() {
         int expected = 2;
         int p = 6;
         int k = 2;
@@ -16,10 +16,10 @@ public class SqAreaTest {
     }
 
     @Test
-    public void when122then() {
-        int expected = 4;
-        int p = 12;
-        int k = 2;
+    public void whenp4k1s1then() {
+        int expected = 1;
+        int p = 4;
+        int k = 1;
         double out = SqArea.square(p,k);
         Assert.assertEquals(expected, out, 0.01);
     }
