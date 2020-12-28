@@ -23,4 +23,10 @@ public class MultiMaxTest {
         int result = MultiMax.max(1, 4, 8);
         assertThat(result, is(8));
     }
+
+    @Test
+    public void whenThirdEqSecond() {
+        int result = MultiMax.max(1, 100, 100);
+        assertThat(result, is(100));
+    }
 }
