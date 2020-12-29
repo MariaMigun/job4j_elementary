@@ -20,9 +20,19 @@ public class MinTest {
     public void whenLastMin() {
         assertThat(
                 Min.findMin(
-                        new int[] {10, 5, 0}
+                        new int[] {10, 5, 3}
                 ),
                 is(3)
+        );
+    }
+
+    @Test
+    public void whenMiddleMin() {
+        assertThat(
+                Min.findMin(
+                        new int[] {10, 5, 13}
+                ),
+                is(5)
         );
     }
 }
