@@ -20,11 +20,10 @@ public class MatrixSumTest {
     @Test
     public void whenThree() {
         int[][] in = {
-                {2, 2, 2},
-                {2, 2, 0},
-                {0, 1, 4}
+                {2, 2, 1},
+                {2, 2, 0}
         };
-        int expect = 15;
+        int expect = 9;
         int rsl = MatrixSum.sum(in);
         assertThat(rsl, is(expect));
     }
