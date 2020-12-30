@@ -20,9 +20,9 @@ public class MatrixCheckTest {
     @Test
     public void whenHasMonoVertical() {
         char[][] input = {
-                {' ', ' ', 'x'},
                 {' ', ' ', 'X'},
-                {' ', ' ', 'x'}
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'}
         };
         boolean result = MatrixCheck.monoVertical(input, 2);
         assertThat(result, is(true));
