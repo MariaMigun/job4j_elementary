@@ -8,7 +8,8 @@ public class ChessBoard {
         }
         return rsl;
     }
+
     public static void main(String[] args) {
-        System.out.println(ChessBoard.way(1,1,2,2));
+        System.out.println(ChessBoard.way(1, 1, 2, 2));
     }
 }

@@ -5,7 +5,7 @@ public class Defragment {
         for (int index = 0; index < array.length; index++) {
             if (array[index] == null) {
                 int point = index; /* указатель на null ячейку. */
-                for(int j = point + 1; j < array.length; j++) {
+                for (int j = point + 1; j < array.length; j++) {
                     if (array[j] != null) {
                         String temp = array[point];
                         array[point] = array[j];

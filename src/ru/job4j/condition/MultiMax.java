@@ -12,7 +12,6 @@ public class MultiMax {
         return result;
     }
 
-
     public static void main(String[] args) {
         int msg = MultiMax.max(1, 4, 8);
         System.out.println(msg);
