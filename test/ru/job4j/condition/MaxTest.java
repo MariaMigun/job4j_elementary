@@ -7,8 +7,9 @@ import static org.junit.Assert.assertThat;
 public class MaxTest {
 
     @Test
-    public void max() {
-        int result = Max.max(1, 2);
-        assertThat(result, is(2));
+    public void maxnum() {
+        Max maximum = new Max();
+        int number = maximum.maxnum(1, 2, 3);
+        assertThat(number, is(3));
     }
 }
