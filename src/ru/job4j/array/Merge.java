@@ -10,19 +10,10 @@ public class Merge {
             } else {
                 resArray[i] = right[i - left.length];
             }
-        }
-        for (int index = 1; index < resArray.length; index++) {
-            for (int j = index - 1; j < resArray.length; j++) {
-                if (resArray[index] < resArray[j]) {
-                    int empty = resArray[j];
-                    resArray[j] = resArray[index];
-                    resArray[index] = empty;
-                }
-                if ((j > 0) && (resArray[j] < resArray[j - 1])) {
-                    int empty = resArray[j - 1];
-                    resArray[j - 1] = resArray[j];
-                    resArray[j] = empty;
-                }
+            if ((i > 0) && (resArray[i] < resArray[i - 1])) {
+                int empty = resArray[i - 1];
+                resArray[i - 1] = resArray[i];
+                resArray[i] = empty;
             }
         }
         return resArray;
