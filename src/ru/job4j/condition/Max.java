@@ -12,4 +12,10 @@ public class Max {
         int res = condition ? maxnum(first, second) : third;
         return res;
     }
+
+    public int maxnum(int first, int second, int third, int fourth) {
+        boolean condition = maxnum(first, second, third) > fourth;
+        int res = condition ? maxnum(first, second, third) : fourth;
+        return res;
+    }
 }

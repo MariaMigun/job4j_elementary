@@ -9,7 +9,7 @@ public class MaxTest {
     @Test
     public void maxnum() {
         Max maximum = new Max();
-        int number = maximum.maxnum(1, 2, 3);
+        int number = maximum.maxnum(1, 2, 3, 0);
         assertThat(number, is(3));
     }
 }
