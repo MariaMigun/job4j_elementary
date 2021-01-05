@@ -9,13 +9,11 @@ public class Max {
 
     public int maxnum(int first, int second, int third) {
         boolean condition = maxnum(first, second) > third;
-        int res = condition ? maxnum(first, second) : third;
-        return res;
+        return maxnum(maxnum(first, second), third);
     }
 
     public int maxnum(int first, int second, int third, int fourth) {
         boolean condition = maxnum(first, second, third) > fourth;
-        int res = condition ? maxnum(first, second, third) : fourth;
-        return res;
+        return maxnum(maxnum(first, second, third), fourth);
     }
 }
