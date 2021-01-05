@@ -2,18 +2,17 @@ package ru.job4j.array;
 
 public class Merge {
     public static int[] merge(int[] left, int[] right) {
-        int tot = left.length + right.length;
-        int [] resArray = new int [tot];
-        for (int i = 0; i < resArray.length; i++) {
-            if (left.length > i) {
-                resArray[i] = left[i];
+        int [] resArray = new int [left.length + right.length];
+        int leftPoint = 0;
+        int rightPoint = 0;
+        int rslPoint = 0;
+        while (leftPoint + rightPoint != resArray.length) {
+            if (leftPoint != left.length && rightPoint != right.length) {
+                resArray[rslPoint++] = left[leftPoint] < right[rightPoint] ? left[leftPoint++] : right[rightPoint++];
+            } else if (leftPoint != left.length) {
+                resArray[rslPoint++] = left[leftPoint++];
             } else {
-                resArray[i] = right[i - left.length];
-            }
-            if ((i > 0) && (resArray[i] < resArray[i - 1])) {
-                int empty = resArray[i - 1];
-                resArray[i - 1] = resArray[i];
-                resArray[i] = empty;
+                resArray[rslPoint++] = right[rightPoint++];
             }
         }
         return resArray;
